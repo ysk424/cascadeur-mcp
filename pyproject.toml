@@ -1,0 +1,20 @@
+[project]
+name = "cascadeur-mcp"
+version = "0.1.0"
+description = "Cascadeur integration through the Model Context Protocol"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "mcp[cli]>=1.3.0",
+]
+
+[project.scripts]
+cascadeur-mcp = "cascadeur_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
